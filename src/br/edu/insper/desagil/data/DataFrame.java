@@ -16,7 +16,7 @@ public class DataFrame {
 		this.columns.put(label, new ArrayList<>(values));
 	}
 	
-	public List<Double> validation(String label) {
+	private List<Double> validation(String label) {
 		if (!this.columns.containsKey(label)) {
 			throw new DataFrameException("Column " + label + " is invalid!");
 		}
